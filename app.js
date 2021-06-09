@@ -1,13 +1,14 @@
 const express = require('express');
-const path = require('path');
 const app = express();
+const handlebars = require('express-handlebars');
 
-const router = express.Router();
 
-router.get('/', (require, response)=>{
-    response.sendFile(path.join(__dirname+'/index.html'));
-});
+app.engine('handlebars', handlebars({defaultLayout:'main'}));
+app.set('view engine', 'handlebars')
 
-app.use('/', router);
-app.listen(process.env.port || 3000);
+app.get('/certificado', (require, response)=>{
+    response.render('certificado');
+})
+
+ app.listen(3000);
 console.log('servidor rodando')
