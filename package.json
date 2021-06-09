@@ -1,0 +1,23 @@
+{
+  "name": "servico-geracao-certificado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pedroajs/servico-geracao-certificado.git"
+  },
+  "author": "pedro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pedroajs/servico-geracao-certificado/issues"
+  },
+  "homepage": "https://github.com/Pedroajs/servico-geracao-certificado#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7"
+  }
+}
