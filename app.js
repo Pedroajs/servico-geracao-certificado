@@ -1,7 +1,13 @@
-const http = require('http');
+const express = require('express');
+const path = require('path');
+const app = express();
 
-const reqListener = (request, response) => {}
+const router = express.Router();
 
-const server = http.createServer(reqListener);
+router.get('/', (require, response)=>{
+    response.sendFile(path.join(__dirname+'/index.html'));
+});
 
-server.listen(3000);
+app.use('/', router);
+app.listen(process.env.port || 3000);
+console.log('servidor rodando')
